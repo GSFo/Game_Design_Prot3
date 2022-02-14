@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7187878777430835756
+--- !u!1 &8877337328642171251
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,23 +8,23 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7187878777430835757}
+  - component: {fileID: 8347945365646143245}
   - component: {fileID: 7187878777430835759}
   - component: {fileID: 7187878777430835758}
   m_Layer: 0
-  m_Name: BasicEnemy
+  m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7187878777430835757
+--- !u!4 &8347945365646143245
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7187878777430835756}
+  m_GameObject: {fileID: 8877337328642171251}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -16.421118, y: 6.7688146, z: 1.0937696}
   m_LocalScale: {x: 0.8, y: 0.8, z: 1}
@@ -38,7 +38,7 @@ SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7187878777430835756}
+  m_GameObject: {fileID: 8877337328642171251}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -89,7 +89,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7187878777430835756}
+  m_GameObject: {fileID: 8877337328642171251}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4aec25cb63585f7449d63ddcc2004bb8, type: 3}
@@ -98,4 +98,4 @@ MonoBehaviour:
   speed: 0
   damage: 0
   life: 0
-  self: {fileID: 7187878777430835756}
+  self: {fileID: 8877337328642171251}
