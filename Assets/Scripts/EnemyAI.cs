@@ -9,9 +9,9 @@ public class EnemyAI : MonoBehaviour
     public float speed;
     public int damage;
     public float life;
-    public Tilemap map;
-    public Grid grid;
-    public Game game;
+    private Tilemap map;
+    private Grid grid;
+    private Game game;
     public GameObject self;
 
     private float speedLimit=10;
@@ -20,6 +20,9 @@ public class EnemyAI : MonoBehaviour
     
     void Start()
     {
+        map = GameObject.Find("Tilemap").GetComponent<Tilemap>();;
+        grid = GameObject.Find("WorldMap").GetComponent<Grid>();;
+        game = GameObject.Find("Game").GetComponent<Game>();;
         refreshDirection();
         if (speed > speedLimit)
         {
