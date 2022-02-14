@@ -6997,7 +6997,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53a5a1619da914a4e959352773feb73e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 7187878777430835757, guid: e0fb85808e3c30c4787675611325b5ce, type: 3}
+  enemy: {fileID: 1511176404435484422, guid: 665d80e689629884eac811162e126add, type: 3}
   spawnPoint: {fileID: 1275647796}
   timeBetweenWaves: 5.5
   waveCountdownText: {fileID: 1152217528}
