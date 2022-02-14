@@ -6499,7 +6499,6 @@ GameObject:
   m_Component:
   - component: {fileID: 300407710}
   - component: {fileID: 300407709}
-  - component: {fileID: 300407711}
   m_Layer: 0
   m_Name: WorldMap
   m_TagString: Untagged
@@ -6534,18 +6533,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &300407711
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 300407708}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ed6876aa4d998e48a6315cb0b0f6f4f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0

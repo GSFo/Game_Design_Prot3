@@ -15,7 +15,7 @@ public class EnemyAI : MonoBehaviour
     public GameObject self;
 
     private float speedLimit=10;
-    private bool refreshTag = false;
+    private Vector3Int lastCell;
     private Vector3 direction;
     
     void Start()
@@ -26,6 +26,8 @@ public class EnemyAI : MonoBehaviour
         map = GameObject.Find("Tilemap").GetComponent<Tilemap>();;
         grid = GameObject.Find("WorldMap").GetComponent<Grid>();;
         game = GameObject.Find("Game").GetComponent<Game>();;
+        lastCell = map.WorldToCell(transform.position);
+
         refreshDirection();
         if (speed > speedLimit)
         {
@@ -37,18 +39,12 @@ public class EnemyAI : MonoBehaviour
     void Update()
     {
         Vector3Int location = map.WorldToCell(transform.position);
-        if (isInCell())
+        if (isInNewCell())
         {
-            if (refreshTag)
-            {
-                refreshDirection();
-                refreshTag = false;
-            }
+            lastCell = location;
+            refreshDirection();            
         }
-        else
-        {
-            refreshTag = true;
-        }
+
             
         transform.position += speed * Time.deltaTime*direction;
         /*
@@ -97,11 +93,21 @@ public class EnemyAI : MonoBehaviour
     }
 
 
-    public bool isInCell()
+    public bool isInNewCell()
     {
-        float distance = (transform.position - grid.CellToWorld(map.WorldToCell(transform.position))-grid.cellSize/2).magnitude;
+        Vector3Int currentCell = map.WorldToCell(transform.position);
         //Debug.Log(grid.CellToWorld(map.WorldToCell(transform.position)));
-        return distance < (1-transform.localScale.x)*.7;
+        if (currentCell != lastCell)
+        {
+            Vector3 distance = transform.position - grid.CellToWorld(currentCell) - grid.cellSize/2;
+            
+            Debug.Log("current location" + transform.position.ToString());
+            Debug.Log("current cell location" + grid.CellToWorld(currentCell).ToString());
+            Debug.Log(distance);
+            
+            return Mathf.Abs(distance.x )< Mathf.Abs(1 - transform.localScale.x)*.5 && Mathf.Abs(distance.y) < Mathf.Abs(1- transform.localScale.y)*.5;
+        }
+        return false;
     }
 
 
