@@ -31,7 +31,7 @@ public class WaveSpawner : MonoBehaviour
     }
 
     IEnumerator SpawnWave(){
-        Debug.Log("Wave Incoming!");
+        // Debug.Log("Wave Incoming!");
         for(int i = 0; i < waveNumber; i++){
             SpawnEnemy();
             yield return new WaitForSeconds(.1f);

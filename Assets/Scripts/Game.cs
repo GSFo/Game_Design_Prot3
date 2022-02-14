@@ -10,7 +10,7 @@ public class Game : MonoBehaviour
     void Start()
     {
         Application.targetFrameRate = 120;
-        Debug.Log("Application running at FPS: " + Application.targetFrameRate.ToString());
+        // Debug.Log("Application running at FPS: " + Application.targetFrameRate.ToString());
         life = 100;
     }
     

@@ -101,9 +101,9 @@ public class EnemyAI : MonoBehaviour
         {
             Vector3 distance = transform.position - grid.CellToWorld(currentCell) - grid.cellSize/2;
             
-            Debug.Log("current location" + transform.position.ToString());
-            Debug.Log("current cell location" + grid.CellToWorld(currentCell).ToString());
-            Debug.Log(distance);
+            // Debug.Log("current location" + transform.position.ToString());
+            // Debug.Log("current cell location" + grid.CellToWorld(currentCell).ToString());
+            // Debug.Log(distance);
             
             return Mathf.Abs(distance.x )< Mathf.Abs(1 - transform.localScale.x)*.5 && Mathf.Abs(distance.y) < Mathf.Abs(1- transform.localScale.y)*.5;
         }
