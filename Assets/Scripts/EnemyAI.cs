@@ -93,9 +93,11 @@ public class EnemyAI : MonoBehaviour
 
     public bool isInCell()
     {
-        float distance = (transform.position - grid.CellToWorld(map.WorldToCell(transform.position))-grid.cellSize/2).magnitude;
-        //Debug.Log(grid.CellToWorld(map.WorldToCell(transform.position)));
-        return distance < (1-transform.localScale.x)*.7;
+        Vector3 location = transform.position;
+        location.z = 0;
+        float distance = (location - grid.CellToWorld(map.WorldToCell(transform.position))-grid.cellSize/2).magnitude;
+        Debug.Log(distance);
+        return distance < (2-transform.localScale.x)*.7;
     }
 
 
